@@ -1,0 +1,37 @@
+<link rel="stylesheet"  href= "{{url_for('static', filename='css/meuestilo.css')}}">
+<link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='icons/olhos-colorido.ico')}}">
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+
+			
+            <h2 class="mt-5">Central de Vigilancia Olhos de Convant </h2>
+			<h1>
+				<p>Camera Frontal Oliveira 1</p>
+				<img src=" {{url_for('static', filename= 'images/main_olhos.png')}}">
+				
+			</h1>	
+				
+			<form method="post" action="{{ url_for('tasks') }}">
+			<input type="submit" value="Stop/Start" name="stop" />
+			<input type="submit" value="Capture" name="click"/>
+			<input type="submit" value="Grey" name="grey" />
+			<input type="submit" value="Negative" name="neg" />
+			<input type="submit" value="Cadastro" name="cad" />
+			<input type="submit" value="Face Only" name="face" />
+			<input type="submit" value="Start/Stop Recording" name="rec" />
+			</form>
+            <img src="{{ url_for('video_feed') }}" height="80%">
+			<h3 style="font-family:courier;">Instructions:</h3>
+			<ol style="font-family:courier;">
+			<li>Parar/Iniciar -- Alterna entre parar ou iniciar a transmissão ao vivo</li>
+			<li>Capture -- Tire fotos e salve no diretório 'shots'</li>
+			<li>Gray -- Alterna entre escala de cinza e saída RGB</li>
+			<li>Negativo -- Alterna entre saída negativa e RGB</li>
+			<li>Face Only--Mostra apenas seu rosto, se presente (Ativar/desativar)</li> 
+			<li>Iniciar/Parar Gravação -- Alterna entre iniciar e parar a gravação de vídeo</li> </ol>	
+        </div>
+    </div>
+</div>
+</body>
