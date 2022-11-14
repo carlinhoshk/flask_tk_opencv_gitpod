@@ -1,8 +1,9 @@
-FROM gitpod:workspace-python-tk
+FROM gitpod/workspace-full:latest
 
 RUN sudo apt-get update && sudo apt-get install -y python3-opencv
 
-RUN pip3 install pencv-python
+RUN pip3 install opencv-python
+RUN pip3 install tk
 RUN pip3 install opencv-contrib-python
 
 RUN pip3 install mysql-connector
