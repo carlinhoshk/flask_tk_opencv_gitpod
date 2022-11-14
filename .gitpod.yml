@@ -1,4 +1,4 @@
-image: jjanzic/docker-python3-opencv
+image: .gitpod.Dockerfile
 ports:
 - port: 8050
   onOpen: open-preview
