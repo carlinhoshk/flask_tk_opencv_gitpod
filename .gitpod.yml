@@ -3,7 +3,6 @@ image:
 ports:
 - port: 80
   onOpen: open-browser
-ports:
 - port: 8050
   onOpen: open-preview
 - port: 8888
